@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 import sqlite3 as sqlite
 import logging
@@ -36,7 +36,7 @@ def arg_parser():
     parser = argparse.ArgumentParser(description='A simple app to keep track of working hours!')
     parser.add_argument('hours', metavar='H', type=int, help='working hours')
     parser.add_argument('--date', '-d', default=date.today(), type=validate_date,
-                        help='the target date (default: today) yy-mm-dd')
+                        help='the target date (default: today) yyyy-mm-dd')
     args = parser.parse_args()
     return args
 
